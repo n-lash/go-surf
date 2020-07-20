@@ -1,0 +1,16 @@
+.footer {
+    padding: 100px 0 35px;
+    &__container {
+        @include flex-col(center, center);
+    }
+    &__link {
+        margin-bottom: 28px;
+    }
+
+    &__text {
+        @include text($H12, 300);
+        font-weight: 300;
+        letter-spacing: 1.05px;
+        opacity: 0.5;
+    }
+}

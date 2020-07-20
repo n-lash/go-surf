@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;800&display=swap');
+
+// Fonts :
+$font-main: 'Fira Sans', sans-serif;
+// font-family: 'Fira Sans', sans-serif;
+
+// Colors
+$bg-color--body : #171919;
+$secondary-color: #4AF6CD;
+$bg-color--slider-item: #1C2121;
+$bg-color--surf-slider-card: #0F1010;
+$N0: #ffffff;
+
+
+
+@function px_to_rem($target, $context: $base-size) {
+    @if $target==0 {
+      @return 0;
+    }
+    @return $target / $context + 0rem;
+}
+  
+  $base-size: 16px;
+  
+  /* ---FONT SIZE--- */
+  $H200: px_to_rem(200px);
+  $H80: px_to_rem(80px);
+  $H72: px_to_rem(72px);
+  $H60: px_to_rem(60px);
+  $H55: px_to_rem(55px);
+  $H50: px_to_rem(50px);
+  $H48: px_to_rem(48px);
+  $H45: px_to_rem(45px);
+  $H40: px_to_rem(40px);
+  $H36: px_to_rem(36px);
+  $H35: px_to_rem(35px);
+  $H33: px_to_rem(33px);
+  $H32: px_to_rem(32px);
+  $H30: px_to_rem(30px);
+  $H28: px_to_rem(28px);
+  $H26: px_to_rem(26px);
+  $H24: px_to_rem(24px);
+  $H22: px_to_rem(22px);
+  $H21: px_to_rem(21px);
+  $H20: px_to_rem(20px);
+  $H19: px_to_rem(19px);
+  $H18: px_to_rem(18px);
+  $H17: px_to_rem(17px);
+  $H16: px_to_rem(16px);
+  $H15: px_to_rem(15px);
+  $H14: px_to_rem(14px);
+  $H13: px_to_rem(13px);
+  $H12: px_to_rem(12px);
+  $H11: px_to_rem(11px);
+  $H10: px_to_rem(10px);
+  $H9: px_to_rem(9px);

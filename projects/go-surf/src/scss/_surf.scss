@@ -1,0 +1,273 @@
+.surf {
+    padding: 100px 0 100px;
+    background: url('../img/map-marker-bg.png') right 100px no-repeat;
+    background-size: auto;
+    &__container {
+        // background: url('../img/map-marker-bg.png') right 100px no-repeat;
+        // background-size: auto;
+    }
+    &__title {
+        // transform: translateX(114%);
+    }
+    &__subtitle,
+    &__section-subtitle {
+        transform: translateY(50%);
+    }
+}
+
+.surf-map {
+    max-width: 1220px;
+    width: calc(100% - 30px);
+    min-height: 635px;
+    margin: 0 auto;
+    background: url('../img/dots-map.png') ;
+    background-size: cover;
+    .slick-list {
+        min-height: 635px;
+    }
+    .slick-current {
+        animation: none;
+        .surf-map__card {
+            display: block;
+        }
+        .surf-map__circle {
+            // box-shadow: 0 0 20px 0 rgba($secondary-color, 1);
+            width: 25px;
+            height: 34px;
+            background: url('../img/icons/marker-drop.svg');
+            border-radius: initial;
+            animation: none;
+        }
+
+    }
+    &__dot {
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        &.slick-slide {
+            width: 24px !important;
+        }
+        &:nth-of-type(1) {
+            top: 332px;
+            // left: 35px;
+            left: 6px;
+            .surf-map__card {
+                transform: translateX(-3%);
+            }
+        }
+        &:nth-of-type(2) {
+            top: 290px;
+            // left: 158px;
+            left: 10%;
+        }
+        &:nth-of-type(3) {
+            top: 318px;
+            // left: 334px;
+            left: 24.5%;
+        }
+        &:nth-of-type(4) {
+            top: 501px;
+            left: 29%;
+        }
+        &:nth-of-type(5) {
+            top: 212px;
+            left: 37%;
+        }
+        &:nth-of-type(6) {
+            top: 555px;
+            left: 43%;
+        }
+        &:nth-of-type(7) {
+            top: 390px;
+            left: 55%;
+        }
+        &:nth-of-type(8) {
+            top: 501px;
+            left: 77.5%;
+            .surf-map__card {
+                transform: translateX(-65%);
+            }
+        }
+    }
+    &__circle {
+        width: 24px;
+        height: 24px;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        // box-shadow: 0 0 0 0 rgba($secondary-color, 1);
+        // transform: scale(1);
+        // animation: pulseMapDots 2s infinite;
+    }
+    &__card {
+        display: none;
+        cursor: auto;
+        width: 285px;
+        padding: 30px;
+        background: rgba($bg-color--surf-slider-card, 0.5);
+        border-radius: 6px;
+        position: absolute;
+        bottom: 35px;
+        transform: translateX(-50%);
+    }
+
+    &__card-row {
+        @include flex-row(space-between);
+    }
+
+    &__card-heading {
+        margin-bottom: 24px;
+    }
+
+    &__card-title {
+        @include text($H18, 800);
+        line-height: 2;
+        position: relative;
+        &:after {
+            content: '';
+            // display: inline-block;
+            width: 80px;
+            height: 1px;
+            background-color: $secondary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__card-subtitle {
+        @include text($H16, 400);
+        text-transform: capitalize;
+        line-height: 2;
+    }
+
+    &__card-link {
+        padding-top: 6px;
+    }
+
+    &__card-item {
+        text-align: center;
+        img {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__card-value {
+        @include text($H16, 800);
+        line-height: 1.2;
+    }
+
+    &__card-property {
+        @include text($H10, 300);
+        line-height: 1.2;
+    }
+}
+
+
+
+.surf-slider {
+    max-width: 1320px;
+    padding: 110px 0 0 0;
+    margin: 0 auto;
+    .slider-arrow {
+        top: 60px;
+        opacity: 0.3;
+        @include media($screen-desktop) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .slick-slide:nth-child(4n + 1) {
+        margin-top: 32px;
+    }
+    .slick-slide:nth-child(4n + 3) {
+        margin-top: 90px;
+    }
+    .slick-current {
+        .surf-slider__link-wrapper {
+            display: block;
+        }
+        .surf-slider__item-wrapper {
+            background-color: rgba($bg-color--slider-item, 0.3);
+        }
+
+    }
+    &__item {
+        // background-image: url('../img/maibu.jpg');
+        // background-image: url('../img/airlie.jpg');
+        // background-image: url('../img/cloud-nine.jpg');
+        // background-image: url('../img/vieux.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // min-height: 750px;
+        outline: none;
+        // position: relative;
+
+
+
+    }
+    &__item-wrapper {
+        min-height: 750px;
+        background-color: rgba($bg-color--slider-item, 0.85);
+        padding: 72px 0 0 40px;
+        position: relative;
+        transition: background-color 0.3s ease;
+        @include media($screen-desktop) {
+            &:hover {
+                background-color: rgba($bg-color--slider-item, 0.3);
+                .surf-slider__link-wrapper {
+                    display: block;
+                }
+            }
+        }
+    }
+    &__item-title {
+        @include text($H40, 800);
+        line-height: 1;
+        span {
+            display: block;
+        }
+    }
+    &__item-location {
+        @include text($H18, 400);
+        line-height: 1;
+        letter-spacing: 8px;
+        position: absolute;
+        left: 40px;
+        bottom: 80px;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        span {
+            font-weight: 100;
+            opacity: 0.3;
+        }
+    }
+    &__link-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        // left: 0;
+        // right: 0;
+        display: none;
+    }
+
+}
+
+// @keyframes pulseMapDots {
+// 	0% {
+// 		transform: scale(0.95);
+// 		box-shadow: 0 0 0 0 rgba(#4AF6CD, 0.7);
+// 	}
+
+// 	70% {
+// 		transform: scale(1);
+// 		box-shadow: 0 0 0 10px rgba(#4AF6CD, 0);
+// 	}
+
+// 	100% {
+// 		transform: scale(0.95);
+// 		box-shadow: 0 0 0 0 rgba(#4AF6CD, 0);
+// 	}
+// }

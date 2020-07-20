@@ -1,0 +1,110 @@
+.shop {
+    padding: 100px 0 150px;
+    background: url('../img/shop-bg.png') right center no-repeat;
+    &__container {}
+
+    &__section-title {
+        margin-bottom: 230px;
+        h2 {
+            &:before {
+                left: 60%;
+            }
+        }
+    }
+
+    &__title {}
+}
+
+.shop-slider {
+    position: relative;
+    .slider-arrow {
+        position: absolute;
+        right: 0px;
+        top: -1%;
+        opacity: 0.3;
+        &--left {
+            right: 45px;
+        }
+        @include media($screen-desktop) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__container {
+        @include flex-row;
+    }
+
+    &__slide {
+        outline: none;
+    }
+
+    &__text-wrapper {
+        padding-left: 55px;
+        flex: 1 1 45%
+    }
+
+    &__subtitle {}
+
+    &__section-subtitle {
+        line-height: 1;
+        margin-bottom: 48px;
+    }
+
+    &__stars {}
+
+    &__price {
+        @include text($H32, 800);
+        margin-bottom: 66px;
+        span {
+            @include text($H18, 800);
+            display: inline-block;
+            transform: translateY(-10px);
+        }
+    }
+
+    &__link {}
+
+    &__img-wrapper {
+        flex: 1 1 15%;
+    }
+
+    &__extras-wrapper {
+        flex: 1 1 45%;
+        max-width: 40%;
+        padding-left: 140px;
+        align-self: flex-end;
+    }
+
+    &__extras-title {
+        @include text($H28, 800);
+        margin-bottom: 30px;
+    }
+
+    &__extras-item-wrapper {
+        @include flex-row(space-between, center);
+    }
+
+    &__extras-item {
+        @include flex-col(center, center);
+    }
+
+    &__extras-item-img {
+        min-height: 105px;
+        margin-bottom: 36px;
+        @include flex-col(center, center);
+    }
+
+    &__extras-item-name {
+        @include text($H18, 400);
+        letter-spacing: 8px;
+        opacity: 0.5;
+        margin-bottom: 16px;
+    }
+
+    &__extras-item-price {
+        @include text($H18, 800);
+        font-style: normal;
+        text-align: center;
+    }
+}

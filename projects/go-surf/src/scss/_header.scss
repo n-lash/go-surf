@@ -1,0 +1,181 @@
+.header {
+    position: relative;
+    min-height: 100vh;
+    // padding-bottom: 32px;
+    &__map {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+    &__aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        border-right: 1px solid rgba($N0, 0.25);
+        min-height: 100vh;
+        text-align: center;
+        @include flex-col(space-between, center);
+        padding-bottom: 45px;
+    }
+    &__title {
+        @include text($H200, 800);
+        // text-transform: uppercase;
+        line-height: 160px;
+        opacity: 0.07;
+        max-width: 468px;
+        position: absolute;
+        top: -6px;
+        left: -20px;
+        z-index: 4;
+    }
+    &__menu {
+       margin-top: 20px;
+    }
+    &__list {
+        @include flex-col(space-between, center);
+        margin-bottom: 20px;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+   &__link {
+        max-width: fit-content;
+        @include flex-col(center, center);
+        &-descr {
+            display: block;
+            padding-top: 6px;
+            letter-spacing: 3px;
+            line-height: 1;
+            @include text($H12, 500);
+            text-transform: capitalize;
+        }
+   }
+   &__search {
+       margin-bottom: 20px;
+   }
+   &__date {
+       margin-bottom: 30px;
+       &-day {
+        @include text($H72, 800);
+        line-height: 1;
+        margin-bottom: 15px;
+       }
+       &-month {
+            @include text($H16, 300);
+            line-height: 1;
+            letter-spacing: 1.4px;
+       }
+   }
+   &__location {
+       @include text($H12, 300);
+       letter-spacing: 1.05px;
+       line-height: 1;
+       text-transform: capitalize;
+       &:before {
+           content: '';
+           display: inline-block;
+            background-image: url('../img/icons/location.svg');
+            position: relative;
+            right: 8px;
+            top: 4px;
+            width: 11px;
+            height: 13px;
+       }
+   }
+   &__arrow-down {
+        position: absolute;
+        left: 210px;
+        bottom: 40px;
+   }
+}
+
+.slider {
+    
+    &__item {
+        min-height: 100vh;
+        background: url('../img/header-bg.jpg') center no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-bottom: 40px;
+        &-info {
+            position: absolute;
+            right: 80px;
+            bottom: 116px;
+            text-align: right;
+            // text-transform: uppercase;
+        }
+        &-title {
+            @include text($H80, 800);
+            line-height: 1;
+            // text-transform: uppercase;
+            margin-bottom: 48px;
+        }
+        &-subtitle {
+            margin-bottom: 14px;
+        }
+        &-subtext {
+
+        }
+        &-text {
+            margin-bottom: 25px;
+        }
+        &-link {
+            width: 24px;
+            text-align: left;
+            width: fit-content;
+            img {
+                width: 24px;
+            }
+        }
+    }
+}
+
+.slider-arrow {
+    position: absolute;
+    width: 24px;
+    top: 40px;
+    z-index: 10;
+    cursor: pointer;
+    &--right {
+        right: 80px;
+    }
+    &--left {
+        right: 125px;
+    }
+}
+.slider-dots {
+    position: absolute;
+    right: 53px;
+    bottom: 36px;
+    max-width: 920px;
+    width: 100%;
+    color: $N0;
+    
+    &__item {
+        height: 38px;
+        outline: none;
+        &-wrapper {
+            width: 200px;
+            border-top: 4px solid $N0;
+            padding-top: 6px;
+            @include flex-row(space-between, center);
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-number {
+            @include text($H24, 800);
+        }
+        &-name {
+            @include text($H16, 300);
+            text-transform: capitalize;
+        }
+        &.slick-current {
+            .slider-dots__item-wrapper {
+                border-top: 4px solid $secondary-color;
+            }
+        }
+    }
+}
