@@ -195,47 +195,32 @@ $map-width: 70%;
         align-items: flex-end;
         padding-bottom: 115px;
 
-        &:nth-child(2) {
-            // box-shadow: 50px 50px 150px 80px #000 inset, -50px -50px 150px -80px #000 inset;
-            box-shadow: 40px 30px 150px 60px $N00 inset,
-                -40px -40px 150px -60px $N00 inset;
-            background: url("../img/header-slide-2.jpg") center no-repeat;
-            background-size: cover;
-            &:after {
-                content: "";
-                background-color: rgba($N00, 0.3);
-                position: absolute;
-                appearance: none;
-                @include position;
-            }
-        }
-        &:nth-child(3) {
-            box-shadow: 40px 30px 150px 60px $N00 inset,
-                -40px -40px 150px -60px $N00 inset;
-            background: url("../img/header-slide-3.jpg") center no-repeat;
-            background-size: cover;
-            &:after {
-                content: "";
-                background-color: rgba($N00, 0.3);
-                position: absolute;
-                @include position;
-                appearance: none;
-            }
-        }
+        &:nth-child(2),
+        &:nth-child(3),
         &:nth-child(4) {
             box-shadow: 40px 30px 150px 60px $N00 inset,
                 -40px -40px 150px -60px $N00 inset;
-            background: url("../img/header-slide-4.jpg") center no-repeat;
-            background-size: cover;
             &:after {
                 content: "";
-                background-color: rgba($N00, 0.3);
+                background-color: rgba($N00, 0.5);
                 position: absolute;
-                @include position;
                 appearance: none;
+                @include position;
             }
         }
-        // &:nth-child(3) {}
+        &:nth-child(2) {
+            background: url("../img/header-slide-2.jpg") center no-repeat;
+            background-size: cover;
+        }
+        &:nth-child(3) {
+            background: url("../img/header-slide-3.jpg") center no-repeat;
+            background-size: cover;
+        }
+        &:nth-child(4) {
+            background: url("../img/header-slide-4.jpg") center no-repeat;
+            background-size: cover;
+        }
+
         @media (min-height: 700px) {
             justify-content: flex-end;
             align-items: flex-end;
