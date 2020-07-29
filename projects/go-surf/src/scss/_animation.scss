@@ -89,7 +89,8 @@
 .line-animation {
     stroke-dashoffset: 600;
     stroke-dasharray: 600;
-    animation: animationdash 4s forwards 6s;
+    animation: animationdash 5s forwards 6s;
+    // animation: animationdash 5s infinite 6s;
     // animation-fill-mode: forwards (infinite)
 }
 

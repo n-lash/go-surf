@@ -10,6 +10,7 @@ $secondary-color: #4AF6CD;
 $bg-color--slider-item: #1C2121;
 $bg-color--surf-slider-card: #0F1010;
 $N0: #ffffff;
+$N00: #000000;
 
 
 
@@ -24,6 +25,8 @@ $N0: #ffffff;
   
   /* ---FONT SIZE--- */
   $H200: px_to_rem(200px);
+  $H150: px_to_rem(150px);
+  $H100: px_to_rem(100px);
   $H80: px_to_rem(80px);
   $H72: px_to_rem(72px);
   $H60: px_to_rem(60px);
@@ -54,3 +57,4 @@ $N0: #ffffff;
   $H11: px_to_rem(11px);
   $H10: px_to_rem(10px);
   $H9: px_to_rem(9px);
+

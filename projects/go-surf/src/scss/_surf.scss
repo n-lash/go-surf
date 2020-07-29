@@ -196,6 +196,8 @@
         // background-image: url('../img/airlie.jpg');
         // background-image: url('../img/cloud-nine.jpg');
         // background-image: url('../img/vieux.jpg');
+        // background-image: url('../img/south-africa-cape-town-muizenberg-beach-1.jpg');
+        // background-image: url('../img/varkala-india.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -203,11 +205,10 @@
         outline: none;
         // position: relative;
 
-
-
     }
     &__item-wrapper {
         min-height: 750px;
+        width: 100%;
         background-color: rgba($bg-color--slider-item, 0.85);
         padding: 72px 0 0 40px;
         position: relative;
@@ -241,6 +242,9 @@
         span {
             font-weight: 100;
             opacity: 0.3;
+        }
+        &--bottom {
+            bottom: 54px;
         }
     }
     &__link-wrapper {
