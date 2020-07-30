@@ -1,9 +1,11 @@
 .sleep {
-    padding: 100px 0 150px;
-    background: url('../img/sleep-frangipani-small.png'), url('../img/sleep-hammock.png'), url('../img/sleep-frangipani-big.png');
-    background-position: right 63%, right 55%, right bottom 5%;
-    background-repeat: no-repeat;
+    // padding: 100px 0 150px;
+    padding: 70px 0 0px;
+    // background: url('../img/sleep-frangipani-small.png'), url('../img/sleep-hammock.png'), url('../img/sleep-frangipani-big.png');
+    // background-position: right 63%, right 55%, right bottom 5%;
+    // background-repeat: no-repeat;
     position: relative;
+    margin-bottom: -120px;
     &__container {}
 
     &__section-title {
@@ -19,10 +21,14 @@
 
 .sleep-slider {
     position: relative;
+    &.slick-initialized.slick-slider {
+        display: flex;
+        flex-direction: column;
+    }
     .slider-arrow {
         position: absolute;
         right: 15px;
-        top: 325px;
+        top: 125px;
         opacity: 0.3;
         &--left {
             right: 60px;
@@ -36,10 +42,15 @@
  
     &__slide {
         outline: none;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 75px;
     }
 
     &__titles-wrapper {
-        transform: translateY(184%);
+        // transform: translateY(184%);
+        position: absolute;
+        right: 15px;
     }
 
     &__subtitle {}
@@ -67,17 +78,47 @@
         width: 1115px;
     }
 
+
+    &__img-aside {
+        position: absolute;
+        right: 0;
+        display: none;
+        &--hamm {
+            bottom: 40%;
+        }
+
+        &--flower-small {
+            bottom: 35%;
+        }
+        &--flower-big {
+            bottom: 10%;
+        }
+        @include media(971px) {
+            display: block;
+        }
+    }
+
+
+    &__text-container {
+        transform: translateY(-30%);
+    }
+
     &__text {
         max-width: 1170px;
         margin: 0 auto;
-        transform: translateY(-28%);
     }
 
     &__info {
-        @include flex-row(space-between);
+        @include flex-col(space-between);
+        flex-wrap: wrap;
         min-height: 200px;
         margin-bottom: 70px;
         margin-top: 90px;
+
+        @include media($screen-tablet-large) {
+            @include flex-row(space-between);
+            flex-wrap: nowrap;
+        }
     }
 
     &__info-item-wrapper {
@@ -92,13 +133,19 @@
         text-align: right;
         letter-spacing: 8px;
         opacity: 0.5;
-        transform: rotate(-90deg) translate(-105%, 0);
-        transform-origin: left top;
+        // transform: rotate(-90deg) translate(-105%, 0);
+        // transform-origin: left top;
+
+        @include media($screen-tablet-large) {
+            transform: rotate(-90deg) translate(-105%, 0);
+            transform-origin: left top;
+        }
     }
 
     &__descr {
-        @include text($H40, 800);
-        padding-left: 40px;
+        @include text($H30, 800);
+        padding-left: 30px;
+        
         line-height: 1;
         span {
             @include text($H14, 400);
@@ -109,9 +156,33 @@
             display: block;
             padding-right: 50px;
         }
+        @include media($screen-desktop) {
+            @include text($H40, 800);
+            padding-left: 40px;
+        }
+    }
+    &__input {display: none;}
+    &__btn-wrapper {
+        @include flex-row(flex-end, center);
+        margin-top: 30px;
+        padding-right: 55px;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        &:first-child {
+            margin-right: 20px;
+        }
+        &--nights {}
+        &--guests {}
     }
 
     &__link {
-        margin: -70px auto 0;
+        margin: 0 auto;
     }
+}
+
+.sleep-slider {
+
+
 }

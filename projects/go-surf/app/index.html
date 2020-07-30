@@ -5,6 +5,7 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>Go Surf</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -355,8 +356,8 @@
 				</div>
 			</div>
 
-			<h3 class="surf__subtitle  subtitle-left-line">Current-location</h3>
-			<h4 class="surf__section-subtitle  section-subtitle">California <span>|</span> USA</h4>
+			<h3 class="surf__subtitle  subtitle-left-line" data-aos="fade-left">Current-location</h3>
+			<h4 class="surf__section-subtitle  section-subtitle" data-aos="fade-left">California <span>|</span> USA</h4>
 	
 			<div class="surf-map">
 				<div class="surf-map__dot">
@@ -612,7 +613,7 @@
 		</div>
 
 		<div class="surf-slider">
-			<div class="surf-slider__item" style="background-image: url('./img/maibu.jpg');">
+			<div class="surf-slider__item" style="background-image: url('./img/cloud-nine.jpg');">
 				<div class="surf-slider__item-wrapper">
 					<h3 class="surf-slider__item-title">Cloud <span>Nine</span></h3>
 					<p class="surf-slider__item-location">Siargao <span>|</span> Philippines</p>
@@ -621,7 +622,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="surf-slider__item" style="background-image: url('./img/airlie.jpg');">
+			<div class="surf-slider__item" style="background-image: url('./img/maibu.jpg');">
 				<div class="surf-slider__item-wrapper">
 					<h3 class="surf-slider__item-title">Malibu <span>Beach</span></h3>
 					<p class="surf-slider__item-location">California <span>|</span> USA</p>
@@ -630,7 +631,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="surf-slider__item" style="background-image: url('./img/cloud-nine.jpg');">
+			<div class="surf-slider__item" style="background-image: url('./img/vieux.jpg');">
 				<div class="surf-slider__item-wrapper">
 					<h3 class="surf-slider__item-title">Surfer's <span>Beach</span></h3>
 					<p class="surf-slider__item-location">Aguadilla <span>|</span> Puerto Rico</p>
@@ -676,7 +677,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="surf-slider__item" style="background-image: url('./img/vieux.jpg');">
+			<div class="surf-slider__item" style="background-image: url('./img/airlie.jpg');">
 				<div class="surf-slider__item-wrapper">
 					<h3 class="surf-slider__item-title">Airlie <span>Beach</span></h3>
 					<p class="surf-slider__item-location">Queensland <span>|</span> Australia</p>
@@ -689,7 +690,9 @@
 		</div>
 	</section>
 
-	<!-- <section class="travel" id="travel">
+	<section class="travel" id="travel">
+		<div class="travel-slider__img-aside  travel-slider__img-aside--plane" data-aos="fade-left"><img src="./img/travel-plane.png" alt=""></div>
+		<div class="travel-slider__img-aside  travel-slider__img-aside--glass" data-aos="fade-left"><img src="./img/travel-coctail.png" alt=""></div>
 		<div class="travel__container  container">
 			<div class="travel__section-title  section-title">
 				<h2 class="travel__title">Travel</h2>
@@ -700,7 +703,7 @@
 
 				<div class="travel-slider__slide">
 					<div class="container">
-						<div class="travel-slider__titles-wrapper">
+						<div class="travel-slider__titles-wrapper" data-aos="fade-left">
 							<h4 class="travel-slider__subtitle  subtitle-left-line">Shore</h4>
 							<h3 class="travel-slider__section-subtitle  section-subtitle">Airlie Beach <span>|</span> Australia</h3>
 						</div>
@@ -708,8 +711,10 @@
 					<div class="travel-slider__img-wrapper">
 						<img class="travel-slider__img" src="./img/travel-bg.png" alt="Beach">
 					</div>
+
+
 			
-					<div class="container">
+					<div class="travel-slider__text-container  container">
 						<div class="travel-slider__text">
 							<h5 class="travel-slider__subtitle  subtitle-right-line">Airline</h5>
 							<h4 class="travel-slider__section-subtitle  section-subtitle  section-subtitle--left">Virgin Australia <img src="./img/icons/travel-virgin.svg" alt="airline logo"></h4>
@@ -740,33 +745,33 @@
 					<div class="container">
 						<div class="travel-slider__titles-wrapper">
 							<h4 class="travel-slider__subtitle  subtitle-left-line">Shore</h4>
-							<h3 class="travel-slider__section-subtitle  section-subtitle">Airlie Beach <span>|</span> Australia</h3>
+							<h3 class="travel-slider__section-subtitle  section-subtitle">Cloud Nine <span>|</span> Philippines</h3>
 						</div>
 					</div>
 					<div class="travel-slider__img-wrapper">
 						<img class="travel-slider__img" src="./img/travel-bg.png" alt="Beach">
 					</div>
 			
-					<div class="container">
+					<div class="travel-slider__text-container  container">
 						<div class="travel-slider__text">
 							<h5 class="travel-slider__subtitle  subtitle-right-line">Airline</h5>
-							<h4 class="travel-slider__section-subtitle  section-subtitle  section-subtitle--left">Virgin Australia <img src="./img/icons/travel-virgin.svg" alt="airline logo"></h4>
+							<h4 class="travel-slider__section-subtitle  section-subtitle  section-subtitle--left">Virgin USA <img src="./img/icons/travel-virgin.svg" alt="airline logo"></h4>
 							<div class="travel-slider__info">
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Destination</h6>
-									<p class="travel-slider__descr">Queensland Australia</p>
+									<p class="travel-slider__descr">Siargao Philippines</p>
 								</div>				
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Distance</h6>
-									<p class="travel-slider__descr">7,065 Miles</p>
+									<p class="travel-slider__descr">1,025 Miles</p>
 								</div>
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Travel Time</h6>
-									<p class="travel-slider__descr">23 Hours 5&nbsp;Minutes</p>
+									<p class="travel-slider__descr">2 Hours 5&nbsp;Minutes</p>
 								</div>
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Pricing</h6>
-									<p class="travel-slider__descr">$ 1,976 USD <span>Round Trip</span></p>
+									<p class="travel-slider__descr">$ 576 USD <span>Round Trip</span></p>
 								</div>
 							</div>
 						</div>
@@ -778,33 +783,33 @@
 					<div class="container">
 						<div class="travel-slider__titles-wrapper">
 							<h4 class="travel-slider__subtitle  subtitle-left-line">Shore</h4>
-							<h3 class="travel-slider__section-subtitle  section-subtitle">Airlie Beach <span>|</span> Australia</h3>
+							<h3 class="travel-slider__section-subtitle  section-subtitle">Malibu Beach <span>|</span> USA</h3>
 						</div>
 					</div>
 					<div class="travel-slider__img-wrapper">
 						<img class="travel-slider__img" src="./img/travel-bg.png" alt="Beach">
 					</div>
 			
-					<div class="container">
+					<div class="travel-slider__text-container  container">
 						<div class="travel-slider__text">
 							<h5 class="travel-slider__subtitle  subtitle-right-line">Airline</h5>
-							<h4 class="travel-slider__section-subtitle  section-subtitle  section-subtitle--left">Virgin Australia <img src="./img/icons/travel-virgin.svg" alt="airline logo"></h4>
+							<h4 class="travel-slider__section-subtitle  section-subtitle  section-subtitle--left">Virgin USA <img src="./img/icons/travel-virgin.svg" alt="airline logo"></h4>
 							<div class="travel-slider__info">
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Destination</h6>
-									<p class="travel-slider__descr">Queensland Australia</p>
+									<p class="travel-slider__descr">Los Angeles USA</p>
 								</div>				
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Distance</h6>
-									<p class="travel-slider__descr">7,065 Miles</p>
+									<p class="travel-slider__descr">165 Miles</p>
 								</div>
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Travel Time</h6>
-									<p class="travel-slider__descr">23 Hours 5&nbsp;Minutes</p>
+									<p class="travel-slider__descr">0 Hours 45&nbsp;Minutes</p>
 								</div>
 								<div class="travel-slider__info-item-wrapper">
 									<h6 class="travel-slider__caption">Pricing</h6>
-									<p class="travel-slider__descr">$ 1,976 USD <span>Round Trip</span></p>
+									<p class="travel-slider__descr">$ 276 USD <span>Round Trip</span></p>
 								</div>
 							</div>
 						</div>
@@ -814,9 +819,12 @@
 
 			</div>			
 		
-	</section> -->
+	</section>
 
-	<!-- <section class="sleep" id="sleep">
+	<section class="sleep" id="sleep">
+		<div class="sleep-slider__img-aside  sleep-slider__img-aside--hamm" data-aos="fade-left"><img src="./img/sleep-hammock.png" alt=""></div>
+		<div class="sleep-slider__img-aside  sleep-slider__img-aside--flower-small" data-aos="fade-left"><img src="./img/sleep-frangipani-small.png" alt=""></div>
+		<div class="sleep-slider__img-aside  sleep-slider__img-aside--flower-big" data-aos="fade-left"><img src="./img/sleep-frangipani-big.png" alt=""></div>
 		<div class="sleep__container  container">
 			<div class="sleep__section-title  section-title">
 				<h2 class="sleep__title">Sleep</h2>
@@ -837,7 +845,7 @@
 					<img class="sleep-slider__img" src="./img/sleep-bg.png" alt="Hotel">
 				</div>
 		
-				<div class="container">
+				<div class="sleep-slider__text-container  container">
 					<div class="sleep-slider__text">
 						<h5 class="sleep-slider__subtitle  subtitle-right-line">Rating</h5>
 						<h4 class="sleep-slider__section-subtitle  section-subtitle  section-subtitle--left">Excellent <img src="./img/icons/sleep-stars.svg" alt="stars"></h4>
@@ -848,22 +856,26 @@
 							</div>				
 							<div class="sleep-slider__info-item-wrapper">
 								<h6 class="sleep-slider__caption"># of Nights</h6>
-								<p class="sleep-slider__descr">5
-									<input type="number" name="" id="" min="1" max="9" step="1" value="5">
+								<div class="sleep-slider__descr">5
+									<input class="sleep-slider__input sleep-slider__input--nights" type="number" min="1" max="9" step="1" value="5">
 									nights
-									<button type="submit"><img src="./img/icons/sleep-minus.svg" alt="-"></button>
-									<button type="submit"><img src="./img/icons/sleep-plus.svg" alt="+"></button>
-								</p>
+									<div class="sleep-slider__btn-wrapper">
+										<button class="sleep-slider__btn  sleep-slider__btn--nights" type="submit"><img src="./img/icons/sleep-minus.svg" alt="-"></button>
+										<button class="sleep-slider__btn  sleep-slider__btn--nights" type="submit"><img src="./img/icons/sleep-plus.svg" alt="+"></button>
+									</div>
+								</div>
 	
 							</div>
 							<div class="sleep-slider__info-item-wrapper">
 								<h6 class="sleep-slider__caption"># of Guests</h6>
-								<p class="sleep-slider__descr">4 
-									<input type="number" name="" id="" min="1" max="9" step="1" value="4">
+								<div class="sleep-slider__descr">4 
+									<input class="sleep-slider__input  sleep-slider__input--guests" type="number" min="1" max="9" step="1" value="4">
 									guests
-									<button type="submit"><img src="./img/icons/sleep-minus.svg" alt="-"></button>
-									<button type="submit"><img src="./img/icons/sleep-plus.svg" alt="+"></button>
-								</p>
+									<div class="sleep-slider__btn-wrapper">
+										<button class="sleep-slider__btn  sleep-slider__btn--guests" type="submit"><img src="./img/icons/sleep-minus.svg" alt="-"></button>
+										<button class="sleep-slider__btn  sleep-slider__btn--guests" type="submit"><img src="./img/icons/sleep-plus.svg" alt="+"></button>
+									</div>
+								</div>
 							</div>
 							<div class="sleep-slider__info-item-wrapper">
 								<h6 class="sleep-slider__caption">Pricing</h6>
@@ -886,7 +898,7 @@
 					<img class="sleep-slider__img" src="./img/sleep-bg.png" alt="Hotel">
 				</div>
 		
-				<div class="container">
+				<div class="sleep-slider__text-container  container">
 					<div class="sleep-slider__text">
 						<h5 class="sleep-slider__subtitle  subtitle-right-line">Rating</h5>
 						<h4 class="sleep-slider__section-subtitle  section-subtitle  section-subtitle--left">Excellent <img src="./img/icons/sleep-stars.svg" alt="stars"></h4>
@@ -924,7 +936,7 @@
 					<img class="sleep-slider__img" src="./img/sleep-bg.png" alt="Hotel">
 				</div>
 		
-				<div class="container">
+				<div class="sleep-slider__text-container  container">
 					<div class="sleep-slider__text">
 						<h5 class="sleep-slider__subtitle  subtitle-right-line">Rating</h5>
 						<h4 class="sleep-slider__section-subtitle  section-subtitle  section-subtitle--left">Excellent <img src="./img/icons/sleep-stars.svg" alt="stars"></h4>
@@ -952,9 +964,9 @@
 			</div>
 
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section class="shop" id="shop">
+	<section class="shop" id="shop">
 		<div class="shop__container  container">
 			<div class="shop__section-title  section-title">
 				<h2 class="shop__title">Shop</h2>
@@ -971,7 +983,7 @@
 							<div class="shop-slider__price">$799 <span>99</span></div>
 							<a class="shop-slider__link  section-btn" href="#">Drop<span>In<img src="./img/icons/arrow-right.svg" alt="View more link"></span></a>
 						</div>
-						<div class="shop-slider__img-wrapper">
+						<div class="shop-slider__img-wrapper" data-aos="fade-up">
 							<div class="shop-slider__img-innercontent-wrapper  shop-slider__img-innercontent-wrapper--1">
 								<div class="shop-slider__img-circle"></div>
 								<div class="shop-slider__img-content">Double Concave with Vee Shape low point</div>
@@ -987,7 +999,7 @@
 							<img src="./img/shop-surfboard.png" alt="surfboard">
 						
 						</div>
-						<div class="shop-slider__extras-wrapper">
+						<div class="shop-slider__extras-wrapper" data-aos="fade-up">
 							<h5 class="shop-slider__extras-title">Extras</h5>
 							<div class="shop-slider__extras-item-wrapper">
 								<div class="shop-slider__extras-item">
@@ -1080,11 +1092,11 @@
 
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<!-- <footer class="footer">
 
-		<div class="footer__container  container">
+		<div class="footer__container  container" data-aos="fade-up">
 			<a class="footer__link  section-btn" href="/">Go<span>Surf</span></a>
 			<p class="footer__text">&copy; Go-Surf 2018. All Rights Reserved.</p>
 		</div>
@@ -1093,6 +1105,7 @@
 	<script src="./assets/libs/jquery-3.5.1.min.js"></script>
 	<!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> -->
 	<script src="./assets/libs/slick/slick.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 </html>

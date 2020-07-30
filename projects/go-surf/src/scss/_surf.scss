@@ -19,6 +19,8 @@
     }
 }
 
+// --------------map dots --------------------------------
+
 .surf-map {
     max-width: 1220px;
     width: calc(100% - 30px);
@@ -169,7 +171,7 @@
     }
 }
 
-
+// ------------------slider------------------------------------- 
 
 .surf-slider {
     max-width: 1320px;
@@ -221,12 +223,15 @@
 
     }
     &__item-wrapper {
-        min-height: 750px;
+        min-height: 600px;
         width: 100%;
         background-color: rgba($bg-color--slider-item, 0.85);
         padding: 72px 0 0 40px;
         position: relative;
         transition: background-color 0.3s ease;
+        @include media($screen-tablet-small) {
+            min-height: 750px;
+        }
         @include media($screen-desktop) {
             &:hover {
                 background-color: rgba($bg-color--slider-item, 0.3);
@@ -247,7 +252,7 @@
         @include text($H18, 400);
         line-height: 1;
         letter-spacing: 8px;
-        text-shadow: 2px 2px 30px $N00;
+        text-shadow: 2px 2px 15px $N00;
         position: absolute;
         left: 40px;
         bottom: 80px;
@@ -274,6 +279,8 @@
 
 }
 
+// -----------------------accordion------------------------------
+
 .surf-accordion {
     max-width: 500px;
     margin: 30px auto;
@@ -281,7 +288,7 @@
     @include media(1260px) {
         display: none;
     }
-    // &__item-wrapper {}
+    &__item-wrapper {}
 
     &__head {
         width: 100%;
