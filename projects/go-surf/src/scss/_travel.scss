@@ -9,6 +9,7 @@
     &__container {}
 
     &__section-title {
+        margin-bottom: 50px;
         h2 {
             &:before {
                 left: 70%;
@@ -122,49 +123,99 @@
         @include flex-col(space-between);
         min-height: 200px;
         margin-bottom: 70px;
-        margin-top: 90px;
+        margin-top: 60px;
 
+        @include media($screen-tablet-medium) {
+            @include flex-col(space-between);
+            // flex-wrap: nowrap;
+        }
         @include media($screen-tablet-large) {
             @include flex-row(space-between);
-            flex-wrap: nowrap;
+            margin-top: 90px;
+            // flex-wrap: nowrap;
         }
+        // @include media($screen-tablet-large) {
+        //     @include flex-row(space-between);
+        // }
+    }
+
+    &__info-additional-wrapper {
+        @include flex-col;
+        margin-bottom: 40px;
+        width: 100%;
+        
+        @include media($screen-tablet-medium) {
+            @include flex-row(space-between);
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media($screen-tablet-large) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+            
     }
     &__info-item-wrapper {
-        flex: 1 1 25%;
-        max-width: 25%;
+        flex: 1 1 100%;
+        max-width: 100%;
         height: 100%;
+        &:nth-child(odd) {
+            margin-bottom: 40px;
+            margin-right: 40px;
+        }
+        @include media($screen-tablet-medium) {
+            flex: 1 1 50%;
+            max-width: 50%;
+            margin-bottom: 0;
+            margin-right: 0;
+        }
     }
     &__caption {
         @include text($H18, 400);
         line-height: 1;
-        text-align: right;
+        
         letter-spacing: 8px;
         opacity: 0.5;
         // transform: rotate(-90deg) translate(-105%, 0);
         // transform-origin: left top;
+        text-align: left;
+        margin-bottom: 20px;
 
+        // @include media($screen-tablet-medium) {
+        //     text-align: left;
+        // }
         @include media($screen-tablet-large) {
             transform: rotate(-90deg) translate(-105%, 0);
             transform-origin: left top;
+            margin-bottom: 0;
+            text-align: right;
         }
     }
     &__descr {
         @include text($H26, 800);
-        padding-left: 30px;
+        padding-left: 0px;
         line-height: 1;
         span {
             @include text($H14, 400);
             line-height: 2.5;
-            text-align: right;
+            text-align: center;
             letter-spacing: 5.25px;
             opacity: 0.75;
             display: block;
             padding-right: 50px;
         }
-
+        @include media($screen-tablet-large) {
+            padding-left: 30px;
+        }
         @include media($screen-desktop) {
             @include text($H40, 800);
             padding-left: 40px;
+            span {
+                text-align: right;
+            }
         }
     }
     &__link {
